@@ -26,9 +26,7 @@ class LexRank(object):
 
     def _to_word_set(self, sentence):
         words = map(self.normalize_word, self._parser.to_words(sentence))
-        wdset = [self.stem_word(w) for w in words if w not in self._stop_words]
-        # wdset = [w for w in words if w not in self._stop_words]
-        return wdset
+        return [self.stem_word(w) for w in words if w not in self._stop_words]
 
 
     def normalize_word(self, word):
