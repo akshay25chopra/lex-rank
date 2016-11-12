@@ -12,8 +12,13 @@ Punkt knows that the periods in Mr. Smith and Johann S. Bach do not mark sentenc
 '''
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
-parser = PlaintextParser(data,tokenizer)
-print(parser.document)
+parser = PlaintextParser(text,tokenizer)
+print("document - ", parser.document)
+print("sentences - ", parser.sentences)
+
+for s in parser.to_sentences(text):
+    print(parser.to_words(s))
+
 
 print(to_unicode("café"))
 print(to_unicode("Hello there... ☃!"))
