@@ -4,7 +4,6 @@ from nltk.tokenize.treebank import TreebankWordTokenizer
 
 class PlaintextParser(object):
     def __init__(self,data,tokenizer):
-        print("parser.__init__")
         self._text = to_unicode(data).strip()
         self._tokenizer = tokenizer
         self._treebank_word_tokenize = TreebankWordTokenizer().tokenize
