@@ -1,9 +1,9 @@
 import nltk.data
 
 from parser.plaintext import PlaintextParser
-from utils import to_unicode
 from summarizer.lex_rank import LexRank
 from utils import to_unicode, ItemsCount
+from stemmer.stemmer import Stemmer
 
 # Get the input data/text
 fpath = "para1.txt"
@@ -32,15 +32,11 @@ stop_words = frozenset(w.rstrip() for w in to_unicode(stopwords_data).splitlines
 # return_count
 return_count = 5
 
-stemmer = "some stemmer"
+stemmer = Stemmer()
 summarizer = LexRank(stemmer, parser)
 summarizer.stop_words = stop_words
 summarizer(parser, return_count)
 
-
-print(to_unicode("café"))
-print(to_unicode("Hello there... ☃!"))
-print("Hello there... ☃!")
 
 items_count = ItemsCount("10%")
 print("items_count ", items_count("test"))
