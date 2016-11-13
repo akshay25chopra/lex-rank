@@ -11,7 +11,7 @@ myfile = open(fpath, 'r')
 data = myfile.read()
 
 text = '''
-Punkt knows that the periods in Mr. Smith and Johann S. Bach do not mark sentence boundaries.  And sometimes sentences can start with non-capitalized words.  i is a good variable name.
+Punkt knows that the periods in Mr. Smith and Johann S. Bach do not mark sentence boundaries. And sometimes sentences can start with non-capitalized words.  i is a good variable name.
 '''
 # Tokenizer for english text
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
@@ -40,3 +40,4 @@ summarizer(parser, return_count)
 
 items_count = ItemsCount("10%")
 print("items_count ", items_count("test"))
+
