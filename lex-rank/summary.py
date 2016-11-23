@@ -16,7 +16,9 @@ Punkt knows that the periods in Mr. Smith and Johann S. Bach do not mark sentenc
 # Tokenizer for english text
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 # Parser for english text
-parser = PlaintextParser(text,tokenizer)
+# parser = PlaintextParser(text,tokenizer) # for english text above
+
+parser = PlaintextParser(data,tokenizer) # for data from file above
 # print("document - ", parser.document)
 # print("sentences - ", parser.sentences)
 # for s in parser.to_sentences(text):
