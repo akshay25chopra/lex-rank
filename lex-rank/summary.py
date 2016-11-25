@@ -6,7 +6,7 @@ from utils import to_unicode, ItemsCount
 from stemmer.stemmer import Stemmer
 
 # Get the input data/text
-fpath = "para1.txt"
+fpath = "para2.txt"
 myfile = open(fpath, 'r')
 data = myfile.read()
 
@@ -32,14 +32,13 @@ stopwords_data = stopwords_file.read()
 stop_words = frozenset(w.rstrip() for w in to_unicode(stopwords_data).splitlines() if w)
 
 # return_count
-return_count = 5
+return_count = "10%"
 
 stemmer = Stemmer()
 summarizer = LexRank(stemmer, parser)
 summarizer.stop_words = stop_words
-summarizer(parser, return_count)
+summary = summarizer(parser, return_count)
 
-
-items_count = ItemsCount("10%")
-print("items_count ", items_count("test"))
+for sentence in summary:
+    print(to_unicode(sentence))
 
