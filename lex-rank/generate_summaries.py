@@ -7,8 +7,13 @@ output_file = open(opfile, 'w')
 
 return_count = "10%"
 
-for folders, subs, files in os.walk("/home/shivalik/Downloads/Timeline17/Data/bpoil_foxnews/InputDocs"):
+path = r"/Users/arorai/Downloads/Timeline17/Data/bpoil_foxnews/InputDocs"
+# path = "/home/shivalik/Downloads/Timeline17/Data/bpoil_foxnews/InputDocs"
+
+for folders, subs, files in os.walk(path):
     for name in files:
+        if '.DS_Store' in name:
+            continue
         filePath = os.path.join(folders, name)
 
         sumy_summary = getSumySummary(filePath, return_count)

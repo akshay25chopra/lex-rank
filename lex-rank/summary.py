@@ -27,7 +27,7 @@ def getLexRankSummary(fpath, return_count):
     stop_words = frozenset(w.rstrip() for w in to_unicode(stopwords_data).splitlines() if w)
     stemmer = Stemmer()
     summarizer = LexRank(stemmer, parser)
-    # summarizer.stop_words = stop_words
+    summarizer.stop_words = stop_words
     summary = summarizer.summarize(parser, return_count)
 
     final = ' '.join(summary)
