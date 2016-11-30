@@ -28,6 +28,9 @@ def getLexRankSummary(fpath, return_count):
     stemmer = Stemmer()
     summarizer = LexRank(stemmer, parser)
     summarizer.stop_words = stop_words
+    if len(parser.sentences) == 0:
+        print(fpath)
+        return 'empty'
     summary = summarizer.summarize(parser, return_count)
 
     final = ' '.join(summary)

@@ -1,3 +1,7 @@
+
+opfile = r"/Users/arorai/projects/text-summarization/lex-rank/output.txt"
+# opfile = "/home/shivalik/Documents/GitHub Projects/NLP_text_summarization/lex-rank/output.txt"
+
 def get_bigram(text):
     n = 2
     ngram_set = set()
@@ -38,7 +42,8 @@ def rouge_bigrams(our_summary, ref_summary):
 ourSummary = []
 refSummary = []
 fileNameList = []
-f = open("/home/shivalik/Documents/GitHub Projects/NLP_text_summarization/lex-rank/output.txt", 'r')
+f = open(opfile, 'r')
+
 for line in f:
     if 'Filename' in line:
         fileNameList.append(line)
