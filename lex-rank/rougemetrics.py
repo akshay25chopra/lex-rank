@@ -59,6 +59,6 @@ for line in f:
 
 f.close()
 
+print("Filename, Similarity")
 for i in range(0, len(fileNameList)):
-    print(fileNameList[i].strip('\n'))
-    print(round((rouge_n(evalSenList[i], refSenList[i], 2) * 100),2), "% similarity")
+    print(fileNameList[i].strip('\n')[9:], "," ,round((rouge_n(evalSenList[i], refSenList[i], 2) * 100),2))
