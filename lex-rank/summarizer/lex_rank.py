@@ -11,7 +11,7 @@ SentenceInfo = namedtuple("SentenceInfo", ("sentence", "order", "rating",))
 class LexRank(object):
 
 
-    _stop_words = frozenset()
+    stop_words_set = frozenset()
     threshold = 0.1
     epsilon = 0.1
 
@@ -20,7 +20,6 @@ class LexRank(object):
         self._parser = parser
 
     def summarize(self, parser, return_count):
-        # self._ensure_dependencies_installed()
         sentence_words = [self.sentence_to_words(s) for s in parser.sentences]
         # print(sentence_words)
         tf_metrics = self.calculate_term_frequency(sentence_words)
@@ -32,19 +31,19 @@ class LexRank(object):
         scores = self.power_method(matrix, self.epsilon)
         ratings = dict(zip(parser.sentences, scores))
 
-        return self._get_best_sentences(parser.sentences, return_count, ratings)
+        return self.get_summary_sentences(parser.sentences, return_count, ratings)
 
 
     @property
     def stop_words(self):
-        return self._stop_words
+        return self.stop_words_set
 
     def stop_words(self, words):
-        self._stop_words = frozenset(map(self.normalize_word, words))
+        self.stop_words_set = frozenset(map(self.normalize_word, words))
 
     def sentence_to_words(self, sentence):
         words = map(self.normalize_word, self._parser.to_words(sentence))
-        return [self.stem_word(w) for w in words if w not in self._stop_words]
+        return [self.stem_word(w) for w in words if w not in self.stop_words_set]
 
     def normalize_word(self, word):
         return to_unicode(word).lower()
@@ -100,7 +99,6 @@ class LexRank(object):
                     degrees[row] += 1
                 else:
                     matrix[row, col] = 0
-                break
 
         for row in range(sentences_count):
             for col in range(sentences_count):
@@ -141,7 +139,7 @@ class LexRank(object):
 
         return p_vector
 
-    def _get_best_sentences(self, sentences, count, rating, *args, **kwargs):
+    def get_summary_sentences(self, sentences, count, rating, *args, **kwargs):
         rate = rating
         if isinstance(rating, dict):
             assert not args and not kwargs
@@ -150,13 +148,11 @@ class LexRank(object):
         infos = (SentenceInfo(s, o, rate(s, *args, **kwargs))
                  for o, s in enumerate(sentences))
 
-        # sort sentences by rating in descending order
+        # sort sentences in descending order
         infos = sorted(infos, key=attrgetter("rating"), reverse=True)
-        # get `count` first best rated sentences
         if not isinstance(count, ItemsCount):
             count = ItemsCount(count)
         infos = count(infos)
         # sort sentences by their order in document
         infos = sorted(infos, key=attrgetter("order"))
-
         return tuple(i.sentence for i in infos)

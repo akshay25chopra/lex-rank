@@ -33,7 +33,7 @@ def getLexRankSummary(fpath, return_count):
     final = ' '.join(summary)
     return final
 
-fpath = "data/para2.txt"
-return_count = "10%"
-print(getLexRankSummary(fpath, return_count))
+# fpath = "data/para2.txt"
+# return_count = "10%"
+# print(getLexRankSummary(fpath, return_count))
 
