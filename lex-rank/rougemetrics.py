@@ -1,50 +1,42 @@
-from __future__ import absolute_import
-from __future__ import division, print_function, unicode_literals
+def get_bigram(text):
+    n = 2
+    ngram_set = set()
+    text_length = len(text)
+    max_index_ngram_start = text_length - n
+    for i in range (max_index_ngram_start + 1):
+        ngram_set.add(tuple(text[i:i+n]))
+    return ngram_set
 
 
-def _get_ngrams(n, text):
-	ngram_set = set()
-	text_length = len(text)
-	max_index_ngram_start = text_length - n
-	for i in range (max_index_ngram_start + 1):
-		ngram_set.add(tuple(text[i:i+n]))
-	return ngram_set
-
-
-def _split_into_words(sentences):
+def get_word_bigrams(sentences):
     sentences = sentences.split()
-    fullTextWords = []
+    words = []
     for s in sentences:
-        fullTextWords.extend(s)
-    return fullTextWords
+        words.extend(s)
+    # print(words)
+    return get_bigram(words)
 
 
-def _get_word_ngrams(n, sentences):
-	assert (len(sentences) > 0)
-	assert (n > 0)
+def rouge_bigrams(our_summary, ref_summary):
 
-	words = _split_into_words(sentences)
-	return _get_ngrams(n, words)
+    our_sum_bigram = get_word_bigrams(our_summary)
+    ref_sum_bigram = get_word_bigrams(ref_summary)
+    total_ref_sum_bigrams = len(ref_sum_bigram)
 
+    matching_bigrams = our_sum_bigram.intersection(ref_sum_bigram)
+    total_matching_bigrams = len(matching_bigrams)
 
-def rouge_n(evaluated_sentences, reference_sentences, n):
+    # print(our_sum_bigram)
+    # print("---------------")
+    # print(ref_sum_bigram)
+    # print(total_ref_sum_bigrams)
+    # print(total_matching_bigrams)
 
-    if len(evaluated_sentences) <= 0 or len(reference_sentences) <= 0:
-        raise (ValueError("Collections must contain at least 1 sentence."))
-
-    evaluated_ngrams = _get_word_ngrams(n, evaluated_sentences)
-    reference_ngrams = _get_word_ngrams(n, reference_sentences)
-    reference_count = len(reference_ngrams)
-
-    # Gets the overlapping ngrams between evaluated and reference
-    overlapping_ngrams = evaluated_ngrams.intersection(reference_ngrams)
-    overlapping_count = len(overlapping_ngrams)
-
-    return overlapping_count / reference_count
+    return total_matching_bigrams / total_ref_sum_bigrams
 
 
-evalSenList = []
-refSenList = []
+ourSummary = []
+refSummary = []
 fileNameList = []
 f = open("/home/shivalik/Documents/GitHub Projects/NLP_text_summarization/lex-rank/output.txt", 'r')
 for line in f:
@@ -52,10 +44,10 @@ for line in f:
         fileNameList.append(line)
 
     if 'Our Summary' in line:
-        evalSenList.append(str(f.__next__()))
+        ourSummary.append(str(f.__next__()))
 
     if 'Reference Summary' in line:
-        refSenList.append(str(f.__next__()))
+        refSummary.append(str(f.__next__()))
 
 f.close()
 
@@ -67,7 +59,7 @@ total = 0
 evaluation_file.write("Filename, Similarity" + '\n')
 for i in range(0, len(fileNameList)):
     fileName = fileNameList[i].strip('\n')[9:]
-    similarity = round((rouge_n(evalSenList[i], refSenList[i], 2) * 100),2)
+    similarity = round((rouge_bigrams(ourSummary[i], refSummary[i]) * 100),2)
     count += similarity
     data = fileName + ", " + str(similarity)
     evaluation_file.write(data + '\n')
