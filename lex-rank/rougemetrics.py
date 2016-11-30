@@ -59,6 +59,19 @@ for line in f:
 
 f.close()
 
-print("Filename, Similarity")
+
+evaluation = "evaluation.csv"
+evaluation_file = open(evaluation, 'w')
+count = 0
+total = 0
+evaluation_file.write("Filename, Similarity" + '\n')
 for i in range(0, len(fileNameList)):
-    print(fileNameList[i].strip('\n')[9:], "," ,round((rouge_n(evalSenList[i], refSenList[i], 2) * 100),2))
+    fileName = fileNameList[i].strip('\n')[9:]
+    similarity = round((rouge_n(evalSenList[i], refSenList[i], 2) * 100),2)
+    count += similarity
+    data = fileName + ", " + str(similarity)
+    evaluation_file.write(data + '\n')
+    total += 1
+
+evaluation_file.write("Average: " + str(round((count/total),2)))
+evaluation_file.close()
