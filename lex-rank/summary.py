@@ -25,17 +25,15 @@ def getLexRankSummary(fpath, return_count):
     stopwords_file = open(stop_words_path, 'r')
     stopwords_data = stopwords_file.read()
     stop_words = frozenset(w.rstrip() for w in to_unicode(stopwords_data).splitlines() if w)
-
     stemmer = Stemmer()
     summarizer = LexRank(stemmer, parser)
-    summarizer.stop_words = stop_words
-    summary = summarizer(parser, return_count)
+    # summarizer.stop_words = stop_words
+    summary = summarizer.summarize(parser, return_count)
 
     final = ' '.join(summary)
     return final
 
-#
-# fpath = "para2.txt"
-# return_count = "10%"
-# print(getLexRankSummary(fpath, return_count))
+fpath = "para2.txt"
+return_count = "10%"
+print(getLexRankSummary(fpath, return_count))
 

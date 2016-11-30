@@ -19,14 +19,16 @@ class LexRank(object):
         self._stemmer = stemmer
         self._parser = parser
 
-    def __call__(self, parser, return_count):
+    def summarize(self, parser, return_count):
         # self._ensure_dependencies_installed()
-        sentence_words = [self._to_word_set(s) for s in parser.sentences]
+        sentence_words = [self.sentence_to_words(s) for s in parser.sentences]
         # print(sentence_words)
-        tf_metrics = self._compute_tf(sentence_words)
-        idf_metrics = self._compute_idf(sentence_words)
+        tf_metrics = self.calculate_term_frequency(sentence_words)
+        # print(tf_metrics)
+        idf_metrics = self.calculate_idf(sentence_words)
+        # print(idf_metrics)
 
-        matrix = self._create_matrix(sentence_words, self.threshold, tf_metrics, idf_metrics)
+        matrix = self.create_matrix(sentence_words, self.threshold, tf_metrics, idf_metrics)
         scores = self.power_method(matrix, self.epsilon)
         ratings = dict(zip(parser.sentences, scores))
 
@@ -37,12 +39,10 @@ class LexRank(object):
     def stop_words(self):
         return self._stop_words
 
-    @stop_words.setter
     def stop_words(self, words):
         self._stop_words = frozenset(map(self.normalize_word, words))
 
-
-    def _to_word_set(self, sentence):
+    def sentence_to_words(self, sentence):
         words = map(self.normalize_word, self._parser.to_words(sentence))
         return [self.stem_word(w) for w in words if w not in self._stop_words]
 
@@ -53,7 +53,7 @@ class LexRank(object):
         return self._stemmer(self.normalize_word(word))
 
     # term frequency in each sentence
-    def _compute_tf(self, sentences):
+    def calculate_term_frequency(self, sentences):
         tf_values = map(collections.Counter, sentences)
         tf_metrics = []
         for sentence in tf_values:
@@ -70,7 +70,7 @@ class LexRank(object):
 
     # term popularity in all sentences combined
     @staticmethod
-    def _compute_idf(sentences):
+    def calculate_idf(sentences):
         idf_metrics = {}
         sentences_count = len(sentences)
         for sentence in sentences:
@@ -82,7 +82,7 @@ class LexRank(object):
         return idf_metrics
 
 
-    def _create_matrix(self, sentences, threshold, tf_metrics, idf_metrics):
+    def create_matrix(self, sentences, threshold, tf_metrics, idf_metrics):
 
         # create matrix |sentences|×|sentences| filled with zeroes
         sentences_count = len(sentences)
@@ -90,14 +90,17 @@ class LexRank(object):
         degrees = numpy.zeros((sentences_count,))
 
         for row, (sentence1, tf1) in enumerate(zip(sentences, tf_metrics)):
+            # print("sentence1:", sentence1)
+            # print("tf1:", tf1)
             for col, (sentence2, tf2) in enumerate(zip(sentences, tf_metrics)):
-                matrix[row, col] = self._compute_cosine(sentence1, sentence2, tf1, tf2, idf_metrics)
+                matrix[row, col] = self.sentence_cosine(sentence1, sentence2, tf1, tf2, idf_metrics)
 
                 if matrix[row, col] > threshold:
                     matrix[row, col] = 1.0
                     degrees[row] += 1
                 else:
                     matrix[row, col] = 0
+                break
 
         for row in range(sentences_count):
             for col in range(sentences_count):
@@ -109,7 +112,7 @@ class LexRank(object):
         return matrix
 
     @staticmethod
-    def _compute_cosine(sentence1, sentence2, tf1, tf2, idf_metrics):
+    def sentence_cosine(sentence1, sentence2, tf1, tf2, idf_metrics):
         common_words = frozenset(sentence1) & frozenset(sentence2)
 
         numerator = 0.0
