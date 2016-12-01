@@ -1,15 +1,19 @@
+# Referenced from Sumy and one of the
+# Research papers called "ROUGE: A package for
+# automatic evaluation of summaries"
 
-opfile = r"/Users/arorai/projects/text-summarization/lex-rank/output.txt"
-# opfile = "/home/shivalik/Documents/GitHub Projects/NLP_text_summarization/lex-rank/output.txt"
+
+# opfile = r"/Users/arorai/projects/text-summarization/lex-rank/output.txt"
+opfile = "/home/shivalik/Documents/GitHub Projects/NLP_text_summarization/lex-rank/output.txt"
 
 def get_bigram(text):
     n = 2
-    ngram_set = set()
+    bigram_set = set()
     text_length = len(text)
-    max_index_ngram_start = text_length - n
-    for i in range (max_index_ngram_start + 1):
-        ngram_set.add(tuple(text[i:i+n]))
-    return ngram_set
+    start_index = text_length - n
+    for i in range (start_index + 1):
+        bigram_set.add(tuple(text[i:i+n]))
+    return bigram_set
 
 
 def get_word_bigrams(sentences):
