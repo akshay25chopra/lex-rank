@@ -36,6 +36,9 @@ def rouge_bigrams(our_summary, ref_summary):
     # print(total_ref_sum_bigrams)
     # print(total_matching_bigrams)
 
+    if total_ref_sum_bigrams == 0:
+        return 0
+
     return total_matching_bigrams / total_ref_sum_bigrams
 
 
