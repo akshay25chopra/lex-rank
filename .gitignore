@@ -4,3 +4,4 @@ __pycache__/
 /lex-rank/output.txt
 /lex-rank/data/*
 text-rank/*
+documents/*
