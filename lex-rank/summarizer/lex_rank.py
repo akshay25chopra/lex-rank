@@ -28,7 +28,6 @@ class LexRank(object):
         # print(idf_metrics)
 
         matrix = self.create_matrix(sentence_words, self.threshold, tf_metrics, idf_metrics)
-
         if len(matrix) == 0:
             print(sentence_words, " and its length:", len(sentence_words))
             print(len(matrix))

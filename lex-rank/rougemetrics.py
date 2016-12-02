@@ -1,5 +1,5 @@
 
-opfile = r"/Users/arorai/projects/text-summarization/lex-rank/output.txt"
+opfile = r"output.txt"
 # opfile = "/home/shivalik/Documents/GitHub Projects/NLP_text_summarization/lex-rank/output.txt"
 
 def get_bigram(text):

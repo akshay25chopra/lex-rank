@@ -1,5 +1,60 @@
-Filename=para2.txt
+Filename= data/1196.htm.txt
 Reference Summary
-But people, who stand to lose huge blackmoney, can feel the pain,” Mr. Shah said addressing a party rally here on Friday. Everybody is waiting for the flood water to recede for climbing down the tree,” the BJP president pointed out. When Modiji came to power in 2014, the country was stuck in recession and whole world believed that India’s growth story had ended.
+President 's reversal of oil drilling ban angers many Dems and some Republicans Hollywood heavyweights threw their star power behind environmental causes on Thursday , advocating for the creation of an Arctic reserve and the protection of animal ... Obama Tries to Buy A Superman Cape `` That 's a lot of ` change to believe in . '
 Our Summary
-“The glow on face of opposition parties has faded,” mocked Mr. Shah. Everybody is waiting for the flood water to recede for climbing down the tree,” the BJP president pointed out. The people are with the Prime Minister,” the BJP president said.
+President 's reversal of oil drilling ban angers many Dems and some Republicans Hollywood heavyweights threw their star power behind environmental causes on Thursday , advocating for the creation of an Arctic reserve and the protection of animal ... Obama Tries to Buy A Superman Cape `` That 's a lot of ` change to believe in . '
+
+Filename= data/184.htm.txt
+Reference Summary
+21 : An oil slick is seen as the Deepwater Horizon oil rig burns in the Gulf of Mexico . AP BILOXI , Mississippi -- This time , it 's not a hurricane that threatens to wreck their livelihoods -- it 's a blob of black ooze slowly making its way toward the Gulf Coast . Crews have not been able to stop thousands of barrels of oil from spewing out of the sea floor since an April 20 explosion destroyed the Deepwater Horizon , which was drilling 50 miles off the Louisiana coast . `` This is the worst possible thing that could happen to the Mississippi Gulf Coast , '' he said . `` It can be effective in calm water , not much wind , in a protected area , '' he said . Crews working to clean up the spill from the Deepwater Horizon have other things in their favor .
+Our Summary
+21 : An oil slick is seen as the Deepwater Horizon oil rig burns in the Gulf of Mexico . AP BILOXI , Mississippi -- This time , it 's not a hurricane that threatens to wreck their livelihoods -- it 's a blob of black ooze slowly making its way toward the Gulf Coast . Crews have not been able to stop thousands of barrels of oil from spewing out of the sea floor since an April 20 explosion destroyed the Deepwater Horizon , which was drilling 50 miles off the Louisiana coast . As crews struggled to contain the oil slick , Coast Guard officials said Tuesday they were considering setting fire to the contaminated water to burn off the crude . `` It can be effective in calm water , not much wind , in a protected area , '' he said . `` We are all worried , '' he said .
+
+Filename= data/257.htm.txt
+Reference Summary
+Louisiana leads the nation in its shrimp supply -- with 89 million pounds produced in 2008 -- followed by Texas , Alabama , Florida and Mississippi . Foster and Hutchinson both stressed that it is too early to speculate the impact , if any , of the oil slick on the travel and tourism industry .
+Our Summary
+Louisiana leads the nation in its shrimp supply -- with 89 million pounds produced in 2008 -- followed by Texas , Alabama , Florida and Mississippi . Foster and Hutchinson both stressed that it is too early to speculate the impact , if any , of the oil slick on the travel and tourism industry .
+
+Filename= data/297.htm.txt
+Reference Summary
+In its 52-page exploration plan and environmental impact analysis for the well , BP suggested it was unlikely , or virtually impossible , for an accident to occur that would lead to a giant crude oil spill and serious damage to beaches , fish , mammals and fisheries . Even at current estimates , the spill could surpass that of the Exxon Valdez supertanker -- which leaked 11 million gallons -- in just two months . `` I would caution you not to get fixated on an estimate of how much is out there , '' Landry said . `` We continue to respond to a much more significant case so that we 're prepared for that in the eventuality that the rate is higher . '' President Barack Obama has ordered Salazar to report to him within 30 days on what new technology is needed to tighten safeguards against deepwater drilling spills .
+Our Summary
+In its 52-page exploration plan and environmental impact analysis for the well , BP suggested it was unlikely , or virtually impossible , for an accident to occur that would lead to a giant crude oil spill and serious damage to beaches , fish , mammals and fisheries . Even at current estimates , the spill could surpass that of the Exxon Valdez supertanker -- which leaked 11 million gallons -- in just two months . But that 's what I get when I apply the numbers , '' he said . `` I would caution you not to get fixated on an estimate of how much is out there , '' Landry said . `` We continue to respond to a much more significant case so that we 're prepared for that in the eventuality that the rate is higher . ''
+
+Filename= data/311.htm.txt
+Reference Summary
+Federal officials say they plan to investigate every possible cause of last week 's massive explosion on the Deepwater Horizon oil rig in the Gulf of Mexico -- including the possibility of criminal acts or negligence . `` They 're going to be focusing on the root cause , how the oil and gas were able to enter the -LRB- well -RRB- that should 've been secured , '' he said . `` There has been a history of gas influxes during cementing operations , so that is an area of concern , but nothing is confirmed , '' Danenberger said . Transocean Ltd. , which operated the rig on lease from BP , has said Halliburton Co. had finished cementing the 18,000-foot well shortly before the explosion .
+Our Summary
+Federal officials say they plan to investigate every possible cause of last week 's massive explosion on the Deepwater Horizon oil rig in the Gulf of Mexico -- including the possibility of criminal acts or negligence . -LRB- U.S. Minerals Management Services -RRB- inspectors should complete these inspections within seven days . `` That 's what -LRB- investigators -RRB- said the operation was just prior to the blast , '' Danenberger said . `` There has been a history of gas influxes during cementing operations , so that is an area of concern , but nothing is confirmed , '' Danenberger said .
+
+Filename= data/420.htm.txt
+Reference Summary
+For days , the Coast Guard has said no oil appeared to be escaping from the well head on the ocean floor . `` In addition to that is oil emanating from the well . BP PLC , which leased the rig and is taking the lead in the cleanup , and the government have been using the remotely operated vehicles to try to stop the leak by closing valves on the well deep underwater . The Deepwater Horizon was the site of a 2005 fire found to have been caused by human error .
+Our Summary
+For days , the Coast Guard has said no oil appeared to be escaping from the well head on the ocean floor . `` In addition to that is oil emanating from the well . BP PLC , which leased the rig and is taking the lead in the cleanup , and the government have been using the remotely operated vehicles to try to stop the leak by closing valves on the well deep underwater . The Deepwater Horizon was the site of a 2005 fire found to have been caused by human error .
+
+Filename= data/471.htm.txt
+Reference Summary
+NEW ORLEANS -- No oil appeared to be leaking from a drilling rig that exploded and sank in the Gulf of Mexico , the Coast Guard said Friday , though officials were trying to contain what spilled after the blast and prevent any threat to the coast 's fragile ecosystem . The fire was out , but officials initially feared as much as 336,000 gallons of crude oil a day could be rising from the sea floor nearly 5,000 feet below . `` They 're assuming all those men who were on the platform are dead , '' Kemp said . April 21 : In this aerial photo taken in the Gulf of Mexico more than 50 miles southeast of Venice on Louisiana 's tip , the Deepwater Horizon oil rig is seen burning .
+Our Summary
+NEW ORLEANS -- No oil appeared to be leaking from a drilling rig that exploded and sank in the Gulf of Mexico , the Coast Guard said Friday , though officials were trying to contain what spilled after the blast and prevent any threat to the coast 's fragile ecosystem . The crew was finishing the well about 50 miles off the Louisiana coast when the rig exploded . `` It 's going to be a god-awful mess for a while , '' he said . `` They 're assuming all those men who were on the platform are dead , '' Kemp said .
+
+Filename= data/541.htm.txt
+Reference Summary
+The leak from the ocean floor proved to be far bigger than initially reported , contributing to a growing sense among many in Louisiana that the government failed them again , just as it did during Hurricane Katrina . He said he did not know whether to blame the Coast Guard , the federal government or oil company BP PLC. They came out and said it was leaking 1,000 barrels when I think they knew it was more . And they were n't proactive , '' he said . The Coast Guard worked with BP , which operated the oil rig that exploded and sank last week , to deploy floating booms , skimmers and chemical dispersants , and set controlled fires to burn the oil off the water 's surface . This murky water and the oysters in it have provided a livelihood for three generations of Frank and Mitch Jurisich 's family in Louisiana . Without the fishing industry , Frank Jurisich said the family `` would be lost .
+Our Summary
+They came out and said it was leaking 1,000 barrels when I think they knew it was more . And they were n't proactive , '' he said . There is no way to stop it , '' he said . This murky water and the oysters in it have provided a livelihood for three generations of Frank and Mitch Jurisich 's family in Louisiana . Without the fishing industry , Frank Jurisich said the family `` would be lost . As dawn broke Thursday in the oil industry hub of Venice , about 75 miles from New Orleans and not far from the mouth of the Mississippi River , crews loaded an orange oil boom aboard a supply boat at Bud 's Boat Launch . `` We do n't believe anything coming out of BP 's mouth . ''
+
+Filename= data/652.htm.txt
+Reference Summary
+The promise came after the Whit ... A government lawyer says the owner of the oil rig that exploded and led to the massive 2010 Gulf oil spill is thwarting a federal board 's efforts to make safety reco ...
+Our Summary
+The owner of the oil rig that exploded and led to the massive 2010 Gulf oil spill is thwarting a federal board 's efforts to make safety recommendations that could pr ... Federal judge outlines new structure for January 2013 trial over Gulf oil spill claims A federal judge has outlined a new structure for a trial of Gulf oil spill claims that would n't be resolved by a proposed class-action settlement between BP PLC and ... British oil giant BP has agreed to pay the U.S. government $ 4.5 billion in installments over a period of five years for the 2010 oil spill in the Gulf of Mexico , the ... BP PLC reached a settlement late Friday night with a committee representing the largest group of plaintiffs suing over the 2010 Gulf oil spill , a federal judge said ...
+
+Filename= data/722.htm.txt
+Reference Summary
+, as preparations continue to head off damage from an inpending oil spill along the Gulf coast . `` And this is the bad one . What makes this spill relentless and most similar to Ixtoc 1 is that it 's an active well that keeps flowing . The type of oil involved is also a major problem . Marshes are so delicate that just trying to clean them causes damage , Kinner said .
+Our Summary
+, as preparations continue to head off damage from an inpending oil spill along the Gulf coast . `` And this is the bad one . `` This is relentless , '' Kinner said . And LSU 's Overton said : `` I 'm not very optimistic that they 'll be drilling a relief well in three months . '' Marshes are so delicate that just trying to clean them causes damage , Kinner said .
+

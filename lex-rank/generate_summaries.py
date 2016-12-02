@@ -8,7 +8,8 @@ output_file = open(opfile, 'w')
 return_count = "10%"
 
 # path= r"data/para2.txt"
-path = r"/Users/arorai/Downloads/Timeline17/Data/bpoil_guardian/InputDocs"
+path= r"data/"
+# path = r"/Users/arorai/Downloads/Timeline17/Data/bpoil_guardian/InputDocs"
 # path = "/home/shivalik/Downloads/Timeline17/Data/bpoil_foxnews/InputDocs"
 
 for folders, subs, files in os.walk(path):
@@ -20,7 +21,7 @@ for folders, subs, files in os.walk(path):
         sumy_summary = getSumySummary(filePath, return_count)
         lex_rank_summary = getLexRankSummary(filePath, return_count)
 
-        output_file.write('Filename=' + name + '\n')
+        output_file.write('Filename= ' + filePath + '\n')
         output_file.write('Reference Summary' + '\n')
         output_file.write(sumy_summary + '\n')
         output_file.write('Our Summary' + '\n')
